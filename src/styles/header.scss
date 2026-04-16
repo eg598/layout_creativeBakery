@@ -96,8 +96,24 @@
   }
 
   &__link {
+    position: relative;
     text-decoration: none;
     color: $black;
+    transition-duration: 0.3s;
+
+    &::before {
+      position: absolute;
+      background-color: $black;
+      content: '';
+      width: 0;
+      height: 1px;
+      bottom: -4px;
+      transition-duration: 0.3s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
   }
 
   &__phone-link {

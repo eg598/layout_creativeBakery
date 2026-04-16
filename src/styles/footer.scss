@@ -13,6 +13,11 @@
     @include on-desktop {
       padding: 88px 44px;
     }
+
+    @include on-phone {
+      padding: 56px 16px;
+      width: 100%;
+    }
   }
 
   &__socials {
@@ -99,8 +104,24 @@
     }
 
     &-link {
+      position: relative;
       text-decoration: none;
       color: white;
+      transition-duration: 0.3s;
+
+      &::before {
+        position: absolute;
+        background-color: white;
+        content: '';
+        width: 0;
+        height: 1px;
+        bottom: -4px;
+        transition-duration: 0.3s;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
     }
   }
 

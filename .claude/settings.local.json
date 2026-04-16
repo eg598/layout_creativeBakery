@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cross-env NODE_ENV=development npx parcel src/index.html)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(npx parcel *)"
+    ]
+  }
+}
